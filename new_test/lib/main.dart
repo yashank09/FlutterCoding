@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.amber,
         appBar: AppBar(
           title: Text(
-            'I AM SOO RICH',
+            'Contact Card Flutter',
           ),
           centerTitle: true,
           backgroundColor: Colors.blueGrey[900],
