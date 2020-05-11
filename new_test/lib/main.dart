@@ -11,18 +11,70 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.amber,
         appBar: AppBar(
           title: Text(
-            'I AM SOO RICHH',
+            'I AM SOO RICH',
           ),
           centerTitle: true,
           backgroundColor: Colors.blueGrey[900],
         ),
-        body: Center(
-          child: Image(
-            image: NetworkImage(
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTCOqGETVQ-QK932xOb3gIDROp5xx1Eu1BWbW7TI3emxOuiO7a8&usqp=CAU'),
+        body: Container(
+          margin: EdgeInsets.symmetric(vertical: 28, horizontal: 12),
+          padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+          color: Colors.deepPurple[700],
+          height: 420,
+          child: Column(
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(top: 8),
+                child: CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage('images/profile_picture.jpg'),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 12),
+                child: Text(
+                  'Yashank Varshney',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24,
+                  ),
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                elevation: 4.0,
+                child: ListTile(
+                  leading: Icon(Icons.phone, color: Colors.deepPurple[700]),
+                  title: Text(
+                    '510-246-9229',
+                    style: TextStyle(
+                        color: Colors.deepPurple[700],
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500),
+                  ),
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                elevation: 4.0,
+                child: ListTile(
+                  leading: Icon(Icons.email, color: Colors.deepPurple[700]),
+                  title: Text(
+                    'yashank.cronaldo@gmail.com',
+                    style: TextStyle(
+                        color: Colors.deepPurple[700],
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500),
+                  ),
+                ),
+              )
+            ],
           ),
         ),
       ),
